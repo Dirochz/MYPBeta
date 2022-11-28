@@ -8,6 +8,8 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.Font;
 import java.awt.HeadlessException;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -30,8 +32,15 @@ public final class ElUs extends javax.swing.JFrame {
     public ElUs() {
         initComponents();
         setTitle("Eliminar Usuario");
-        this.setLocationRelativeTo(null);        
+        this.setLocationRelativeTo(null);     
+        setIconImage(getIconImage());
         table();
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     void table(){

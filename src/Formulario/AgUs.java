@@ -1,4 +1,6 @@
 package Formulario;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.*;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
@@ -12,8 +14,14 @@ public class AgUs extends javax.swing.JFrame {
         initComponents();
         setTitle("Agregar Usuario");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
     }
-
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

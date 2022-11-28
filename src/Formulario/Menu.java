@@ -1,4 +1,6 @@
 package Formulario;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +21,13 @@ public final class Menu extends javax.swing.JFrame {
         user = Login.nick;
         nombre();
         checar();
+        setIconImage(getIconImage());
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     void nombre(){

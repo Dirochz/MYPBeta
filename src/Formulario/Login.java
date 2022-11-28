@@ -1,4 +1,6 @@
 package Formulario;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import myp.beta.Conexion;
 import java.sql.Connection;
@@ -15,8 +17,15 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setTitle("Login");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
     }
-
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/logo.png"));
+        return retValue;
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -8,6 +8,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.sql.Date;
 import java.awt.Font;
 import java.awt.HeadlessException;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -42,6 +44,13 @@ public final class Ticket extends javax.swing.JFrame {
         dbox();
         table();
         nombre();
+        setIconImage(getIconImage());
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     void nombre(){

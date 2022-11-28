@@ -9,6 +9,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.Font;
 import java.awt.HeadlessException;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -38,6 +39,13 @@ public final class Reportes extends javax.swing.JFrame {
         setTitle("Reporte");
         this.setLocationRelativeTo(null);
         masV();
+        setIconImage(getIconImage());
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     void masV(){

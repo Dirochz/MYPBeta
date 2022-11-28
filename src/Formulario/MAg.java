@@ -1,13 +1,23 @@
 package Formulario;
 
-public class MAg extends javax.swing.JFrame {
+import java.awt.Image;
+import java.awt.Toolkit;
+
+public final class MAg extends javax.swing.JFrame {
 
     public MAg() {
         initComponents();
         setTitle("Menu Agregar");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
     }
 
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

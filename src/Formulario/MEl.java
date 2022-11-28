@@ -1,13 +1,22 @@
 package Formulario;
 
-public class MEl extends javax.swing.JFrame {
+import java.awt.Image;
+import java.awt.Toolkit;
+
+public final class MEl extends javax.swing.JFrame {
 
     public MEl() {
         initComponents();
         setTitle("Menu Eliminar");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
     }
 
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

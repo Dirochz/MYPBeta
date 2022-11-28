@@ -9,6 +9,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.Font;
 import java.awt.HeadlessException;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.FileNotFoundException;
@@ -40,8 +41,15 @@ public final class ElPr extends javax.swing.JFrame {
         initComponents();
         setTitle("Eliminar Producto");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
         table();
         dbox();
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     void dbox(){

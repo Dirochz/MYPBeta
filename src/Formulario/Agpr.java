@@ -17,13 +17,20 @@ import static javax.swing.JOptionPane.YES_NO_CANCEL_OPTION;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import myp.beta.Conexion;
 
-public class Agpr extends javax.swing.JFrame {
+public final class Agpr extends javax.swing.JFrame {
     int resp,canti;
     Double pree;
     public Agpr() {
         initComponents();
         setTitle("Agregar Productos");
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/logo.png"));
+        return retValue;
     }
     
     @SuppressWarnings("unchecked")
